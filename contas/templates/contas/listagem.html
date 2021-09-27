@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Listagem</h2>
+
+    <ul>
+    {% for kda1 in transacoes %}
+<li> <a href="{%url 'url_update' kda1.id %}">  {{kda1.descricao}} - {{kda1.data}}  - {{kda1.valor}}
+    {{kda1.categoria}}
+</a></li>
+    {%endfor%}</ul>
+
+<a href="{%url 'url_nova' %}">Novo</a>
+
+</body>
+</html>
